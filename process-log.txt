@@ -1,0 +1,68 @@
+Elsevier Technical Test - Log:
+
+Brief
+In a language of your choice create a web application
+which uses the attached JSON Graph as a data store.
+
+The application should provide at least the following
+capabilities and provide a suitable foundation for
+other developers to enhance and improve upon in the
+near and distant future.
+
+-   A display of all the product titles
+
+-   The ability to search for a product based on product title
+
+We suggest that you host your application in AWS and use GitHub
+for source control as you will be required to demonstrate your solution
+and talk through the code which you’ve implemented. Additionally an
+Elsevier employee will need to be granted access to view the application
+and source code before this demonstrate
+
+If you believe it is necessary you are invited to enhance your
+solution by implementing additional functionalities which you
+feel would be useful for a company such as Elsevier
+
+---------LOG------------
+
+1. Learn how to use the data from a JSON file in JS. This way
+I can start trying to pull parts of the data. (Starting point)
+
+Renamed JSON file. (content.json)
+Trying to understand the data in the file is very difficult.
+http://www.w3resource.com/JSON/structures.php
+
+JSON is a Value/String based data structure of Objects and Arrays.
+From what I understand, "worksById" contains the main chunk of
+product information, "doisByID" contains further info about the chapters
+and the vectors. Not sure what these would be used for. Search engine, keywords?
+
+2. Created Amazon Web Services Account
+Was planning on building on HTML, CSS, JS. Quick bit of research first:
+What is the difference between a web application and website?
+Answer: Not much! If it's dynamic then it's okay.
+
+3. GOAL: Get JS and JSON talking via HTML hosted on AWS.
+
+HTML/CSS, JS/JQuery framework set up and talking.
+
+Have decided to use one JS file to handle the data and functions and
+the other solely for controlling the app content.
+
+Started off by hosting the json file on AWS and using a XHR request to pull it
+and store it. Ran into cross domain problems when trying to test locally
+so I researched further. Now using $.getJSON and storing the data in a var
+in my repository file.
+
+Studied $.each() to learn how to iterate through the json data a pull values.
+
+Wrote getData() function to store json as var.
+Wrote getProducts() function to store each Product in an array of objects.
+This is invoked within getData() as part of the callback/onComplete function.
+Wrote getAZ() function. Pulls Product title values from the Products array and
+displays them as a string with line breaks.
+Would be an improvement if I can retain the objects so that I can hover
+on them and display more info etc.
+
+Added logging to my code. to confirm function completion and status updates
+to the user if required.

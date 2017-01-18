@@ -7,3 +7,12 @@ button{
   font-family: sans-serif;
   font-size: 20px;
 }
+
+#status{
+  font-size: 10px;
+  color: red;
+}
+
+#aZ{
+  font-size: 15px;
+}

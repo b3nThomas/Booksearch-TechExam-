@@ -8,12 +8,19 @@
 
 $(document).ready(function(){
 
-      getData('j/data.json');//stores JSON data when page loads.
+  getData('j/data.json');
+    //stores JSON data when page loads.
 
-      $('#getAZ').click(function(){
-        getAZ();
-        console.log(aZ);
-        $('#aZ').html(aZ);
-      })
+  $('#aZ').hide();
+  
+  $('#getAZ').click(function(){
+    $('#aZ').toggle(500);
+    statusUpdate("A-Z toggled...");
+  })
+
+  $('#reset').click(function() {
+      resetPage();
+  });
+
 
 });//jq end
