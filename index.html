@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"></meta>
     <title>Booksearch.app</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="main.css"></link>
     <script type="text/javascript" src="j/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="j/repository.js"></script>
     <script type="text/javascript" src="j/script.js"></script>
 
   </head>
 
   <body>
     <div>
-      <h1>Welcome to Booksearch</h1>
-      <p>Here is a book from the database: </p>
-      <p id="demo"><p>
+      <h1>Booksearch</h1>
+
+      <h5>Status update: <span id="status"></span></h5>
+
+      <button id="getAZ">Show A-Z</button>
+
+      <div id="showData"></div>
+      <div id="aZ"></div>
 
     </div>
   </body>

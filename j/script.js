@@ -3,25 +3,17 @@
 
 
 //FUNCTIONS
-var data;
-
-var xmlhttp = new XMLHttpRequest();
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        data = JSON.parse(this.responseText);
-    }
-};
-xmlhttp.open("GET", "https://s3.amazonaws.com/aws-website-booksearch-techexam-jx72a/j/data.json", true);
-xmlhttp.send();
 
 //JQUERY
+
 $(document).ready(function(){
 
-  $("body").css("display", "none");
-  $("body").hide();
-  $("body").fadeIn(1000, function(){
+      getData('j/data.json');//stores JSON data when page loads.
 
-  $('#demo').html(data.worksById[9780000001979].Title.TitleText);
-  });
+      $('#getAZ').click(function(){
+        getAZ();
+        console.log(aZ);
+        $('#aZ').html(aZ);
+      })
 
-}); //CLOSING TAG (LEAVE ALONE)
+});//jq end
