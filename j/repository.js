@@ -1,3 +1,4 @@
+//BenThomas 16/01/17
 //respository.js
 //Have buttons become visible once data has loaded.
 //Researching Modular design pattern
@@ -71,7 +72,7 @@ function search(){//Return product titles based on input.
   statusUpdate(count + " result(s) found containing '" + str + "'...");
 
   if(count == 0){
-    $('#showData').html("<li> 0 results found. Please try again </li>");
+    $('#showData').html("<li> 0 results found for '" + str + "'. Please try again. </li>");
   }
   else{
   $('#showData').html(searchResults);

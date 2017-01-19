@@ -2,16 +2,30 @@ html{
   font-family: sans-serif;
   font-size: 20px;
   overflow-y: scroll;
+  background: #333333;
 }
 
 button{
-  font-family: sans-serif;
+  border-radius: 3px;
   cursor: pointer;
+  font-family: sans-serif;
+}
+
+#main{
+  background: #8c8c8c;
+  border-radius: 20px;
+  margin: auto;
+  padding: 15px 20px;
+  width: 70vw;
 }
 
 #status{
+  background: #333333;
+  border-radius: 3px;
+  color: #e60000;
   font-size: 12px;
-  color: red;
+  padding: 3px;
+
 }
 
 #showData li{
