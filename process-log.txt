@@ -54,6 +54,8 @@ and store it. Ran into cross domain problems when trying to test locally
 so I researched further. Now using $.getJSON and storing the data in a var
 in my repository file.
 
+4.Gain access to required data.
+
 Studied $.each() to learn how to iterate through the json data a pull values.
 
 Wrote getData() function to store json as var.
@@ -62,7 +64,14 @@ This is invoked within getData() as part of the callback/onComplete function.
 Wrote getAZ() function. Pulls Product title values from the Products array and
 displays them as a string with line breaks.
 Would be an improvement if I can retain the objects so that I can hover
-on them and display more info etc.
+on them and display more info etc. Will go back to this after basic requirements are met.
 
 Added logging to my code. to confirm function completion and status updates
 to the user if required.
+
+Decided that an A-Z toggle was not necessary. Removed this. Discovered that .sort()
+is case sensitive. Found solution for case insensitive sort. getAZ() function tweaked.
+localCompare() used. Return -1, 0 or 1 if the string is before, equal or after
+in the sort order.
+
+Created search functionality. Wrote my own code based on a prompt input from the user.
