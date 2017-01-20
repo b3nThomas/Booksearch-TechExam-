@@ -10,7 +10,7 @@ var display = [];
 var searchResults = [];
 
 function statusUpdate(text){ //Log updates and informs user of actions
-  $('#status').append(text);
+  $('#status').html(text);
   console.log(text)
 }
 
