@@ -2,34 +2,39 @@
 
 function ListModel(url) {
 
-  this._data = getData(url);
-  this._products = getProducts();
-  this._aToZ = sortProducts();
+  this._url = url;
+  this._data;
+  this._products = [];
+  this._aToZ = [];
 
-}
-
+};
 
 
 ListModel.prototype = {
 
-  getData : function(url) {
-    $.getJSON(url, function(response) {
-      return response;
-    }
-  }
+
+  getData : function() {
+    //Retrieve and store data from the designated url as a property
+    var self = this;
+    console.log("gathering data...")
+    $.getJSON(this._url, function(response) {
+        console.log("data stored...")
+        return self._data = response;
+      })
+  },
+
 
   getProducts : function() {
-    var products = [];
-    $.each(this._data.worksById, function(index, value){
-      products.push(value)
-    });
-    return products;
+    //Extract and store product objects from the data
+    var self = this;
+    $.each(this._data.worksById, function(index, value) {
+        self._products.push(value);
+    })
+    console.log("products stored...");
+  },
 
-  sortProducts : function() {
-    this._products.Title.TitleText.sort(function (a, b) {
-      return a.toLowerCase().localeCompare(b.toLowerCase());//Sorts case insensitively
-    });
 
-  }
 
-}
+
+
+};

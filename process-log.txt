@@ -75,3 +75,17 @@ localCompare() used. Return -1, 0 or 1 if the string is before, equal or after
 in the sort order.
 
 Created search functionality. Wrote my own code based on a prompt input from the user.
+
+
+
+APPEND TO RECENT VERSION
+
+Created a ListModel object that will manage data.
+Run into an issue when trying to set Object properties using a prototype function.
+The $.getJSON callback loses scope of 'this'.
+Learned about 'closures'.Declaring a local version of 'this' within the function.
+Remembers where it came from...
+
+retrieveData() - Can now store the data successfully in the ListModel object.
+getProducts() - Used a closure again to get and store products form the data. Working to spec.
+Learn how to sort based on product properties.
