@@ -76,16 +76,26 @@ in the sort order.
 
 Created search functionality. Wrote my own code based on a prompt input from the user.
 
+-------FIRST DRAFT SUBMITTED 20/01/17----------
 
+V2 Goals:
+Eliminate global variables
+Learn and implement Model View Controller structure to this app.
+Try and use responsive web design. Have been reading up about it today.
+Use CSS @media{}.
+Display more info when clicking on a book title, as mentioned previously.
 
-APPEND TO RECENT VERSION
+Learning best practices for a MVC file structure.
+v2.0-mvc created with new file structure.
 
 Created a ListModel object that will manage data.
+Saw someone use underscores when defining object properties, I like this
+and will be suing it for my code.
 Run into an issue when trying to set Object properties using a prototype function.
 The $.getJSON callback loses scope of 'this'.
-Learned about 'closures'.Declaring a local version of 'this' within the function.
+Learned about 'closures'. Declaring a local version of 'this' within the function.
 Remembers where it came from...
 
-retrieveData() - Can now store the data successfully in the ListModel object.
+getData() - Can now store the data successfully in the ListModel object.
 getProducts() - Used a closure again to get and store products form the data. Working to spec.
 Learn how to sort based on product properties.
