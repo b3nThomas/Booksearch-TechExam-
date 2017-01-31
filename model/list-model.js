@@ -5,13 +5,11 @@ function ListModel(url) {
   this._url = url;
   this._data;
   this._products = [];
-  this._aToZ = [];
 
 };
 
 
 ListModel.prototype = {
-
 
   getData : function() {
     //Retrieve and store data from the designated url as a property
@@ -26,15 +24,25 @@ ListModel.prototype = {
 
   getProducts : function() {
     //Extract and store product objects from the data
+    this._products = [];
     var self = this;
     $.each(this._data.worksById, function(index, value) {
         self._products.push(value);
     })
-    console.log("products stored...");
+    this.sortProducts();
+    console.log("products stored / sorted a-z...")
   },
 
-
-
+  sortProducts : function() {
+    //Sort _products array based on product title
+    this._products.sort(function(a, b) {
+      var titleA = a.Title.TitleText.toUpperCase();
+      var titleB = b.Title.TitleText.toUpperCase();
+      if (titleA < titleB) { return -1; }
+      if (titleA > titleB) { return 1; }
+      return 0;
+    })
+  },
 
 
 };

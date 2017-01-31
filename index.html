@@ -6,26 +6,32 @@
     <link rel="stylesheet" type="text/css" href="view/css/main.css"></link>
     <script type="text/javascript" src="controller/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="model/list-model.js"></script>
+    <script type="text/javascript" src="model/product-model.js"></script>
     <script type="text/javascript" src="view/js/list-view.js"></script>
     <script type="text/javascript" src="controller/list-controller.js"></script>
 
   </head>
 
   <body>
-    <div id="main">
-      <h1>Booksearch</h1>
+    <div id="content">
 
-        <div id="status-bar">
-          <h5>Status updates: <span id="status"></span></h5>
+      <div id="header">
+        <p id="title" class="orange palantino">Elsevier ~ ScienceDirect</p>
+      </div>
+
+      <div id="products-frame">
+
+        <div id="products-header">
+          <ul class="white palantino">
+            <li><a id="start-search" class="pointer"> Search </a></li>
+            <li><a id="show-all" class="pointer"> Show All </a></li>
         </div>
 
-        <button id="do-something">Do something</button>
+        <div id="products-list">
+          <ul>
+          </ul>
+        </div>
 
-
-      <div>
-        <h5>Product list: </h5>
-        <ul id="show-data">
-        </ul>
       </div>
 
     </div>
